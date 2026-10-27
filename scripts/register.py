@@ -75,7 +75,10 @@ def main():
         model_info = mlflow.pyfunc.log_model(
             name="classifier",
             python_model=DNNPyfunc(),
-            code_paths=[str(ROOT / "src")],
+            code_paths=[
+                str(ROOT / "src" / "serving_model.py"),
+                str(ROOT / "src" / "model.py"),
+            ],
             artifacts={
                 "checkpoint": checkpoint_path
             },
