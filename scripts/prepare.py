@@ -20,8 +20,8 @@ con.execute("""
 
 # Deterministic split for this demonstration
 splits = {
-    "train": "row_id % 10 < 7",
-    "val": "row_id % 10 = 7",
+    "train": "row_id % 10 < 6",
+    "val": "row_id % 10 in (6, 7)",
     "test": "row_id % 10 >= 8",
 }
 
