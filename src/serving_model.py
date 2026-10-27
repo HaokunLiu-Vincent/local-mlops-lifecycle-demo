@@ -13,7 +13,7 @@ class DNNPyfunc(mlflow.pyfunc.PythonModel):
         checkpoint = torch.load(
             context.artifacts["checkpoint"],
             map_location="cpu",
-            weights_only=True,
+            weights_only=False,
         )
 
         self.features = checkpoint["feature_names"]
