@@ -1,0 +1,5 @@
+{
+  "model_name": "binary-classifier",
+  "model_version": "2",
+  "model_uri": "models:/binary-classifier/2"
+}
