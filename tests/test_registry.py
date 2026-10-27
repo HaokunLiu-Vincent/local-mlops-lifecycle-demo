@@ -20,10 +20,10 @@ for version in versions:
     )
 
 # Replace this with the version you just registered
-version_number = "1"
+version_number = "2"
 
 model = mlflow.pyfunc.load_model(
-    f"models:/{model_name}/{version_number}"
+    f"models:/binary-classifier@champion"
 )
 
 example = pd.DataFrame(
